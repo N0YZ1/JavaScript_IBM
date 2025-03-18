@@ -17,9 +17,9 @@ console.log(globalLet); // Salida: "También soy global, pero con alcance de let
 console.log(globalConst); // Salida: "Soy una constante global"
 
 //Block Scope
-//console.log(blockVar); Este si da
-//console.log(blockConst);
-//console.log(blockLet);
+//console.log(blockVar); Este si
+//console.log(blockConst); //Lanza Error
+//console.log(blockLet); //Lanza Error
 
 function show(){
     var functionVar = "Soy una var con alcance de bloque";
@@ -28,6 +28,29 @@ function show(){
     }
     show();
     
-    console.log(functionVar); // Lanza ReferenceError
-    console.log(functionLet); // Lanza ReferenceError
-    console.log(functionConst); // Lanza ReferenceError
+    //console.log(functionVar); // Lanza ReferenceError
+    //console.log(functionLet); // Lanza ReferenceError
+    //console.log(functionConst); // Lanza ReferenceError
+
+//Práctica
+{
+    var x = 1;
+    let y = 2;
+    const z = 3;
+
+    console.log(x);
+    console.log(y);
+    console.log(z);
+
+    x = x*100;
+    console.log(x);
+    y = y*100;
+    console.log(y);
+}
+
+x = x/200;
+console.log(x);
+
+//Note que var es la unica que se puede modificar fuera del bloque
+//Let se puede modificar siempre y cuando este dentro del bloque
+//Const nunca se puede modificar
